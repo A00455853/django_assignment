@@ -11,21 +11,26 @@ from rest_framework.views import APIView
 
 # Create your views here.
 
-# def home(request):
-#     hotel = {
-#         'id': 123,
-#         'name': 'IBIS HOTEL'
-#
-#     }
-#     data = Hotel.objects.all();
-#     response = {'hotels': list(data.values('name', 'location'))}
-#
-#     return JsonResponse(response)
-#
+def home(request):
+    hotel = {
+        'id': 123,
+        'name': 'IBIS HOTEL'
+
+    }
+    data = Hotel.objects.all();
+    response = {'hotels': list(data.values('name', 'location'))}
+
+    return JsonResponse(response)
+
 
 # function based views
 @api_view(['GET', 'POST'])
+
 def listHotels(request):
+    """
+    Function based views for get and post type of request
+    """
+    serializer_class = HotelSerializer
     if request.method == 'GET':
         hotels = Hotel.objects.all();
         serializer = HotelSerializer(hotels, many=True)
