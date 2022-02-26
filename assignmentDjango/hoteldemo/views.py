@@ -10,7 +10,7 @@ from rest_framework.views import APIView
 
 
 # Create your views here.
-
+# creating the http json response
 def home(request):
     hotel = {
         'id': 123,
@@ -44,7 +44,7 @@ def listHotels(request):
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+#primary key based get , put and update opetaion
 @api_view(['GET','PUT','DELETE'])
 def hotel_detail(request,hotelid):
     try:
@@ -67,7 +67,7 @@ def hotel_detail(request,hotelid):
         hotel.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
+#class based views
 class HotelList(APIView):
 
     def get(self,request):
