@@ -18,9 +18,9 @@ All the endpoints are listed into one page http://127.0.0.1:8000/swagger-ui/.
 Sample object for hotel 
 {
     "hotelId": int,
-    "name": <string>,
-    "location": <string>
-  }
+    "name": STRING,
+    "location": String 
+    }
 Function bases views 
 1. GET:  http://127.0.0.1:8000/app/listhotels/ To get the list of hotels saved in the database table.
 2. POST:  http://127.0.0.1:8000/app/listhotels/  with request body as hotel object to create a new hotel in database.
