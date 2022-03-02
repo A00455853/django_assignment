@@ -100,8 +100,8 @@ DATABASES = {
         'NAME': 'n_kumar',
         'USER': 'n_kumar',
         'PASSWORD': 'A00455853!cda',
-        'HOST': '127.0.0.1',
-        'PORT': '8080',
+        'HOST': 'dev.cs.smu.ca',
+        'PORT': '3306',
     }
 }
 
