@@ -2,6 +2,7 @@
 --------
 Set Up
 --------
+I have used tunnel from dev.cs.smu.ca and used the database since dev.cs.smu.ca mysql instance  was not accebile from local machine.
 Install below library..
 
 1. $ pip install django
